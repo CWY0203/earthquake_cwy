@@ -684,7 +684,6 @@
                                     <th>PGA(gal)</th>
                                     <th>PGV(cm/s)</th>
                                     <th>台站数量</th>
-                                    <th>台站地图</th>
                                 </tr>
                             </thead>
                             <tbody id="table-body">
@@ -702,9 +701,7 @@
         <div class="container">
             <div class="station-header">
                 <h2 class="section-title">台站强震动数据详情：新疆克孜勒苏州阿合奇县M6.0地震</h2>
-                <a href="https://zhz0302.github.io/kepler/station.html" class="station-map-link" target="_blank">
-                    <i class="fas fa-map-marked-alt"></i> 查看台站分布地图
-                </a>
+                
             </div>
             <div class="station-table-container">
                 <table class="station-table">
@@ -791,8 +788,6 @@
 				pgv: 11.00,
 				intensity: 6.9,
 				stationCount: 10,
-				hasStationMap: true,
-				stationMapUrl: "https://zhz0302.github.io/kepler/station.html"
 			},
 			{
 				id: 2,
@@ -806,8 +801,6 @@
 				pgv: 8.20,
 				intensity: 6.2,
 				stationCount: 8,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 3,
@@ -821,8 +814,6 @@
 				pgv: 3.80,
 				intensity: 5.1,
 				stationCount: 6,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 4,
@@ -836,8 +827,6 @@
 				pgv: 9.60,
 				intensity: 6.5,
 				stationCount: 9,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 5,
@@ -851,8 +840,6 @@
 				pgv: 2.40,
 				intensity: 4.8,
 				stationCount: 5,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 6,
@@ -866,8 +853,6 @@
 				pgv: 4.70,
 				intensity: 5.4,
 				stationCount: 7,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 7,
@@ -881,8 +866,6 @@
 				pgv: 0.10,
 				intensity: 1.6,
 				stationCount: 20,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 8,
@@ -896,8 +879,6 @@
 				pgv: 0.10,
 				intensity: 2.2,
 				stationCount: 10,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 9,
@@ -911,8 +892,6 @@
 				pgv: 0.0,
 				intensity: -1.6,
 				stationCount: 19,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 10,
@@ -926,8 +905,6 @@
 				pgv: 13.20,
 				intensity: 7.1,
 				stationCount: 12,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 11,
@@ -941,8 +918,6 @@
 				pgv: 3.10,
 				intensity: 5.0,
 				stationCount: 6,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 12,
@@ -956,8 +931,6 @@
 				pgv: 3.10,
 				intensity: 5.2,
 				stationCount: 112,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 13,
@@ -971,8 +944,6 @@
 				pgv: 6.90,
 				intensity: 5.9,
 				stationCount: 7,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 14,
@@ -986,8 +957,6 @@
 				pgv: 0.40,
 				intensity: 3.0,
 				stationCount: 1,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 15,
@@ -1001,8 +970,6 @@
 				pgv: 0.20,
 				intensity: 1.6,
 				stationCount: 2002,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 16,
@@ -1016,8 +983,6 @@
 				pgv: 0.30,
 				intensity: 2.8,
 				stationCount: 89,
-				hasStationMap: false,
-				stationMapUrl: ""
 			},
 			{
 				id: 17,
@@ -1031,8 +996,6 @@
 				pgv: 0.30,
 				intensity: 2.7,
 				stationCount: 224,
-				hasStationMap: false,
-				stationMapUrl: ""
 			}
 		];
 
@@ -1264,7 +1227,6 @@
                         <p><strong>峰值速度(PGV)：</strong>${quake.pgv} cm/s</p>
                         <p><strong>仪器烈度：</strong>${quake.intensity.toFixed(1)}</p>
                         <p><strong>台站数量：</strong>${quake.stationCount}</p>
-                        ${quake.hasStationMap ? `<p style="margin-top: 15px;"><a href="${quake.stationMapUrl}" class="link-btn" target="_blank"><i class="fas fa-map-marked-alt"></i> 查看台站分布地图</a></p>` : ''}
                     </div>
                 `;
                 
@@ -1304,7 +1266,6 @@
                     <td>${quake.pga}</td>
                     <td>${quake.pgv}</td>
                     <td>${quake.stationCount}</td>
-                    <td>${mapLink}</td>
                 `;
                 
                 // 点击事件
